@@ -99,6 +99,8 @@ body {
 }
 
 .my-image-2 {
+    display: flex;
+
     grid-area: image;
     width: 350px;
     height: 500px;
@@ -106,10 +108,15 @@ body {
     margin-top: 20px;
 }
 
+.my-image-2 img {
+    order: 1;
+}
+
 .email {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 2;
     width: 350px;
     height: 100px;
     margin-bottom: 6em;
@@ -122,13 +129,13 @@ body {
     width: 350px;
     height: 500px;
     border-radius: 5px;
+    margin-bottom: 20px;
     background-color: #002333;
-    margin-bottom: 5px;
 }
 
 .sec-3 {
     display: grid;
-    grid-template-columns: .2fr 2fr 2fr;
+    grid-template-columns: .1fr 2fr 2fr;
     grid-template-rows: .1fr 2fr;
     grid-template-areas: 
     "header header header"
@@ -151,6 +158,8 @@ body {
     justify-content: center;
     align-items: center;
     grid-area: skill-icons;
+    align-self: center;
+    width: 3rem;
     height: 50vh;
     background-color: #002333;
     margin: .5em;
@@ -158,43 +167,70 @@ body {
 }
 
 .box-icons {
-    width: 3em;
-    height: 47vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 2.5rem;
+    height: 49vh;
     background-color: #b4bec9;
+}
+
+.box-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.box-porcent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    grid-area: bar-porcent;
+    align-self: center;
+    height: 50vh;
+    background-color: #002333;
+    margin: .5em;
+    border-radius: 5px;
 }
 
 .bar-porcent {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: bar-porcent;
-    height: 50vh;
-    background-color: #002333;
-    margin: .5em;
+    width: 95%;
+    height: 5px;
     border-radius: 5px;
+    background-color: #159a9c;
 }
 
-.box-porcent {
-    width: 95%;
-    height: 90%;
-    border-radius: 5px;
+.ball-porcent {
+    width: 20px;
+    height: 20px;
     background-color: #b4bec9;
+    border-radius: 50%;
 }
 
 .coments {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     grid-area: coments;
+    align-self: center;
+    gap: 5px;
     height: 50vh;
     background-color: #002333;
     margin: .5em;
     border-radius: 5px;
 }
 
-.box-content {
+.box-coments {
     width: 95%;
-    height: 90%;
+    height: 50px;
+    border:#159a9c solid 1px;
     border-radius: 5px;
-    background-color: #b4bec9;
+    font-size: 14px;
 }
