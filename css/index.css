@@ -1,6 +1,7 @@
 * {
     margin: 0;
 }
+
 body {
     background-color: #002333;
 }
@@ -21,6 +22,14 @@ body {
 
 }
 
+.sec-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    justify-content: center;
+    height: 100vh;
+}
+
 .header {
     width: 100%;
 }
@@ -35,18 +44,11 @@ header nav h4:hover {
     gap: 5px;
 }
 
-.sec-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
-
 .card-home {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    width: 300px;
+    width: 100%;
     height: 100vh;
 }
 
@@ -54,19 +56,21 @@ header nav h4:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 2;
     position: relative;
     z-index: 1;
-    transform: translate(0, 100px);
-    width: 355px;
-    height: 350px;
+    transform: translate(0, 55%);
+    order: 2;   
+    max-width: 400px;
+    min-width: 300px;
+    width: 48%;
+    height: 48%;
     background-color: #002333;
     border-radius: 50%;
 }
 
 .circle-2 {
-    width: 300px;
-    height: 300px;
+    width: 80%;
+    height: 80%;
     background-color: #159a9c;
     border-radius: 50%;
     justify-content: center;
@@ -78,16 +82,22 @@ header nav h4:hover {
     border-radius: 50%;
 }
 
+.sub-card-flex {
+    max-width: 400px;
+    min-width: 300px;
+    width: 47%;
+    height: 400px;
+    background-color: #002333;
+}
+
 .name-lastname {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: center;
-    transform: translate(-0.1%, -50px);
-    width: 350px;
-    height: 300px;
+    width: 100%;
+    height: 50px;
     border-radius: 3px;
-    background-color: #002333;
+   
 }
 
 .icos-social {
@@ -113,8 +123,11 @@ header nav h4:hover {
     display: flex;
     flex-direction: column;
     grid-area: image;
+    max-width: 300px;
+    min-width: 250px;
     width: 80%;
-    height: 500px;
+    height: 60%;
+    flex-shrink: 0.1em;
     margin-top: 20px;
     border-radius: 5px;
     background-color: #002333;
@@ -125,6 +138,7 @@ header nav h4:hover {
     align-self: center;
     width: 90%;
     height: 100%;
+    flex-shrink: inherit;
     margin-top: 15px;
     border-radius: 5px;
 }
@@ -145,10 +159,14 @@ header nav h4:hover {
 }
 
 .text-about-my {
+    display: flex;
     grid-area: about;
     align-self: flex-end;
+    max-width: 300px;
+    min-width: 250px;
     width: 80%;
-    height: 500px;
+    height: 60%;
+    flex-shrink: 0.1em;
     border-radius: 5px;
     margin-bottom: 20px;
     background-color: #002333;
@@ -162,6 +180,8 @@ header nav h4:hover {
     "header header header"
     "skill-icons bar-porcent coments";
 }
+
+
 
 .title-sec-3 {
     display: flex;
@@ -180,6 +200,7 @@ header nav h4:hover {
     align-items: center;
     grid-area: skill-icons;
     align-self: center;
+    max-width: 50px;
     width: 3rem;
     height: 50vh;
     background-color: #002333;
@@ -215,6 +236,8 @@ header nav h4:hover {
     gap: 2em;
     grid-area: bar-porcent;
     align-self: center;
+    max-width: 350px;
+    min-width: 300px;
     height: 50vh;
     background-color: #002333;
     margin: .5em;
@@ -251,6 +274,8 @@ header nav h4:hover {
     grid-area: coments;
     align-self: center;
     gap: 5px;
+    max-width: 300px;
+    min-width: 300px;
     height: 50vh;
     background-color: #002333;
     margin: .5em;
@@ -265,3 +290,56 @@ header nav h4:hover {
     font-size: 14px;
     text-align: center;
 }
+
+@media (max-width: 730px) {
+    .sec-3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+.icons-skills {
+    width: 50vw;
+    height: 3rem;
+}
+
+.box-icons {
+    width: 49vw;
+    height: 2.5rem;
+}
+        
+}
+
+@media (max-width: 550px) {
+    .header {
+        justify-items: center;
+        width: 100%;
+    }
+
+    .sec-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my-image-2 {
+        height: 0.1fr;
+    }
+
+    .email {
+        height: 50px;
+    }
+
+    .text-about-my {
+        margin: auto;
+        height: 1fr;
+        
+    }
+
+    
+ 
+}
+
+
