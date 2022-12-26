@@ -80,6 +80,7 @@ header nav h4:hover {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    background: url('../img/Luffy.jpg');
 }
 
 .sub-card-flex {
@@ -141,6 +142,7 @@ header nav h4:hover {
     flex-shrink: inherit;
     margin-top: 15px;
     border-radius: 5px;
+    background: url('../img/20221206_143659.jpg');
 }
 
 .email {
