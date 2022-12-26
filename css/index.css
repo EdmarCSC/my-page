@@ -11,12 +11,14 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-    justify-items: center;
+    margin: auto;
+    max-width: 960px;
+    max-height: 90vh;
 }
 
 .saction {
     background-color: #b4bec9;
-    width: 95vw;
+    width: 100%;
     height: 100vh;
     border-radius: 5px;
 
@@ -44,12 +46,12 @@ header nav h4:hover {
     gap: 5px;
 }
 
-.card-home {
+.card-home {    
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 }
 
 .circle-1 {
@@ -58,10 +60,11 @@ header nav h4:hover {
     align-items: center;
     position: relative;
     z-index: 1;
-    transform: translate(0, 55%);
+    transform: translate(0, 50%);
     order: 2;   
-    max-width: 400px;
+    max-width: 300px;
     min-width: 300px;
+    min-height: 300px;
     width: 48%;
     height: 48%;
     background-color: #002333;
@@ -73,28 +76,34 @@ header nav h4:hover {
     height: 80%;
     background-color: #159a9c;
     border-radius: 50%;
-    justify-content: center;
 }
 
 .my-image-1s {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: url('../img/Luffy.jpg');
+    background-image: url('../img/Luffy.jpg');
+    background-repeat: no-repeat;
+    background-size: 110%;
 }
 
 .sub-card-flex {
-    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 300px;
     min-width: 300px;
     width: 47%;
-    height: 400px;
+    height: 300px;
     background-color: #002333;
+    border-radius: 5px;
 }
 
 .name-lastname {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 50px;
     border-radius: 3px;
@@ -143,6 +152,8 @@ header nav h4:hover {
     margin-top: 15px;
     border-radius: 5px;
     background: url('../img/20221206_143659.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .email {
@@ -183,8 +194,6 @@ header nav h4:hover {
     "skill-icons bar-porcent coments";
 }
 
-
-
 .title-sec-3 {
     display: flex;
     grid-area: header;
@@ -224,11 +233,52 @@ header nav h4:hover {
     width: 30px;
     height: 30px;
     margin: 2px;
+    border-style: hidden;
+
 }
 
-.icon-js, .icon-github {
+.icon-html {
+    background-image: url(../assets/html-5.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
     border-radius: 20px;
 }
+
+.icon-css {
+    background-image: url(../assets/css-3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.icon-js {
+    background-image: url(../assets/js.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.icon-git {
+    background-image: url(../assets/git.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.icon-github {
+    background-image: url(../assets/github.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.icon-wabpack {
+    background-image: url();
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
 
 .box-porcent {
     display: flex;
@@ -294,23 +344,28 @@ header nav h4:hover {
 }
 
 @media (max-width: 730px) {
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+
     .sec-3 {
         display: flex;
         flex-direction: column;
     }
 
 
-.icons-skills {
-    width: 50vw;
-    height: 3rem;
-}
+    .icons-skills {
+        width: 50vw;
+        height: 3rem;
+    }
 
-.box-icons {
-    width: 49vw;
-    height: 2.5rem;
-}
-        
-}
+    .box-icons {
+        width: 49vw;
+        height: 2.5rem;
+    }
+            
+    }
 
 @media (max-width: 550px) {
     .header {
@@ -340,7 +395,10 @@ header nav h4:hover {
         
     }
 
+    .box-porcent {
+        height: 3fr;
     
+    }
  
 }
 
